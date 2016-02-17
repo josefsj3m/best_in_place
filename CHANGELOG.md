@@ -3,7 +3,7 @@
   - add option[:skip_blur] to play nice with wysiwhtml5
   
 - v.3.1.1 :
-  - Added masked input support through JQuery Masked Input plugin from http://digitalbush.com/projects/masked-input-plugin/
+  - Added masked input support through JQuery inputmask plugin from https://github.com/RobinHerbots/jquery.inputmask
 
 - v.3.0.3 :
   - Pass all callback arguments on $.ajax

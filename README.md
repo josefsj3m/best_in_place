@@ -44,6 +44,12 @@ Then, just add a binding to prepare all best in place fields when the document i
 
 You are done!
 
+###Using masked input field
+
+If you want to use masked input field you should also require jquery.inputmask after jquery.js:
+
+    //= require jquery.inputmask.bundle.min
+
 ##Features
 
 - Compatible with text **inputs**
@@ -61,6 +67,7 @@ You are done!
 - Provided test helpers to be used in your integration specs
 - Custom display methods using a method from your model or an existing rails
   view helper
+- Provided support to fields with static mask  
 
 ##Usage of Rails 3 Gem
 
@@ -97,6 +104,12 @@ Options:
 - **:param**: If you wish to specific the object explicitly use this option.
 - **:confirm**: If set to true displays a confirmation message when abandoning changes (pressing the escape key).
 - **:skip_blur**: If set to true, blurring the input will not cause changes to be abandoned in textareas.
+- **:mask**: It can be used in input fields type only. You can supply a static mask using these definitions:
+    - 9: numeric
+    - a: alphabetical
+    - *: alphanumer
+- **:unmask_to_send**: It accepts :true or :false, defaults to :true. If a mask is supplied you can use this options to inform whether the field will be unmasked before to be sent to the server.
+  
 
 HTML Options:
 
@@ -141,6 +154,17 @@ Examples (code in the views):
     <%= best_in_place @user, :name, :as => :input %>
 
     <%= best_in_place @user, :name, :as => :input, :place_holder => "Click me to add content!" %>
+    
+### Input with mask
+
+    <%= best_in_place @user, :name, :as => :input, :mask => "9999-9999-aaaa" %>
+    
+    Or to unmask the field before sending to the server:
+
+    <%= best_in_place @user, :name, :as => :input, :mask => "9999-9999-aaaa", :unmask_to_send => :true %>  
+
+To use input field with mask you must require jquery.inputmask.bundle.min. This plugin is supplied bundled with this gem.
+You can see the original inputmask at [RobinHerbots](https://github.com/RobinHerbots/jquery.inputmask).  
 
 ### Textarea
 
