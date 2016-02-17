@@ -46,7 +46,6 @@ module BestInPlace
       options[:data]['bip-cancel-button-class'] = opts[:cancel_button_class].presence
       options[:data]['bip-original-content'] = html_escape(opts[:value] || value).presence
 
-      #options[:data]['mask'] = opts[:mask].presence
       options[:data]['bip-mask'] = opts[:mask].presence
       options[:data]['bip-unmask-to-send'] = opts[:unmask_to_send].presence
 
