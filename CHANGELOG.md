@@ -2,6 +2,9 @@
 - unreleased
   - add option[:skip_blur] to play nice with wysiwhtml5
   
+- v.3.1.2 :  
+  - Fixed bug when mask has numeric character only
+  
 - v.3.1.1 :
   - Added masked input support through JQuery inputmask plugin from https://github.com/RobinHerbots/jquery.inputmask
 
