@@ -2,6 +2,9 @@
 - unreleased
   - add option[:skip_blur] to play nice with wysiwhtml5
   
+- v.3.1.3 :
+  - Fixed bug when unmasking before sending to server
+  
 - v.3.1.2 :  
   - Fixed bug when mask has numeric character only
   
